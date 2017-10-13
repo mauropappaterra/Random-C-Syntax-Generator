@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="JavaFXApp">
+    <output-path>$PROJECT_DIR$/exe</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Random_C.Main" />
+        <option name="description" value="" />
+        <option name="height" value="725" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="Random C Syntax Generator" />
+        <option name="vendor" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="JavaFXApp.jar">
+        <element id="module-output" name="Random_C" />
+      </element>
+    </root>
+  </artifact>
+</component>
