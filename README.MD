@@ -3,15 +3,15 @@
 Randomly generates a syntactically correct C snippet. This short Java program generates C code using a set of production rules. 
 <br>
 
-<h4>Production Rules </h4>
-Set of productions used to define a subset of the C programming language.
+<h4>Production Rules set used to define a subset of the C programming language. </h4>
+
 <br>
 
 <pre>
 <b><'prog></b> ::= "int main() { <'stat_list> return 0; }"
 <br>
 <b><'stat_list></b> ::= <'stat>
-	     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| <'stat_list> <'stat>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp | <'stat_list> <'stat>
 <br>
 <'stat> ::= <'cmpd_stat>
 	&nbsp &nbsp &nbsp &nbsp &nbsp | <'if_stat>
