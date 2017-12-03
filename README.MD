@@ -5,57 +5,68 @@ Randomly generates a syntactically correct C snippet. This short Java program ge
 
 <h4>Production Rules set used to define a subset of the C programming language. </h4>
 
-<br>
-
 <pre>
 <b><'prog></b> ::= "int main() { <'stat_list> return 0; }"
 <br>
+
 <b><'stat_list></b> ::= <'stat>
 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp | <'stat_list> <'stat>
 <br>
-<'stat> ::= <'cmpd_stat>
+
+<b><'stat></b> ::= <'cmpd_stat>
 	&nbsp &nbsp &nbsp &nbsp &nbsp | <'if_stat>
 	&nbsp &nbsp &nbsp &nbsp &nbsp | <'iter_stat>
 	&nbsp &nbsp &nbsp &nbsp &nbsp | <'assgn_stat>
 	&nbsp &nbsp &nbsp &nbsp &nbsp | <'decl_stat>
 <br>
-<'cmpd_stat> ::= { <'stat_list> }
+
+<b><'cmpd_stat></b> ::= { <'stat_list> }
 <br>
-<'if_stat> ::= if ( <'exp> ) <'stat>
-	   | if ( <'exp> ) <'cmpd_stat>
- 	   | if ( <'exp> ) <'stat> else <'stat>
-	   | if ( <'exp> ) <'cmpd_stat> else <'stat>
-	   | if ( <'exp> ) <'stat> else <'cmpd_stat>
-	   | if ( <'exp> ) <'cmpd_stat> else <'cmpd_stat>
+
+<b><'if_stat></b> ::= if ( <'exp> ) <'stat>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| if ( <'exp> ) <'cmpd_stat>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| if ( <'exp> ) <'stat> else <'stat>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| if ( <'exp> ) <'cmpd_stat> else <'stat>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| if ( <'exp> ) <'stat> else <'cmpd_stat>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| if ( <'exp> ) <'cmpd_stat> else <'cmpd_stat>
 <br>
-<'iter_stat> ::= while ( <'exp> ) <'stat>
-	     | while ( <'exp> ) <'cmpd_stat>
+
+<b><'iter_stat></b> ::= while ( <'exp> ) <'stat>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| while ( <'exp> ) <'cmpd_stat>
 <br>
-<'assgn_stat> ::= <'id> = <'exp> ;
+
+<b><'assgn_stat></b> ::= <'id> = <'exp> ;
 <br>
-<'decl_stat> ::= <'type> <'id> ;
-  	     | <'type> <'assgn_stat>
+
+<b><'decl_stat></b> ::= <'type> <'id> ;
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| <'type> <'assgn_stat>
 <br>
-<'exp> ::= <'exp> <'op> <'exp>
-       | <'id>
-       | <'const><'op> ::= + | - | * | /
+<b><'exp></b> ::= <'exp> <'op> <'exp>
+&nbsp &nbsp &nbsp &nbsp &nbsp | <'id>
+&nbsp &nbsp &nbsp &nbsp &nbsp | <'const><'op> ::= + | - | * | /
 <br>
+
 <'type> ::= int
-	| double
+&nbsp &nbsp &nbsp &nbsp &nbsp | double
 <br>
+
 <'id> ::= <'char><'chardigit_seq>
 <br>
+
 <'const> ::= <'digit><'digit_seq>
 <br>
+
 <'char_digit_seq> ::= [empty]
-      		  | <'char><'char_digit_seq>
-		  | <'digit><'char_digit_seq>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp | <'char><'char_digit_seq>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp | <'digit><'char_digit_seq>
 <br>
+
 <'digit_seq> ::= [empty]
-     	     | <'digit><'digit_seq>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp| <'digit><'digit_seq>
 <br>
+
 <'char> ::= [A-Z] | [a-z] | _
 <br>
-<'digit> ::= [0-9]
 
+<'digit> ::= [0-9]
 </pre>
