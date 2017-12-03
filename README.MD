@@ -1,13 +1,10 @@
-Random C Syntax Generator
+# Random C Syntax Generator
 
-Part of a programming activity for "Course"
-
-
-
-
+Randomly generates a syntactically correct C snippet. This short Java program generates C code using a set of production rules. 
+<br><br>
 Set of productions used to define a subset of the C programming language:
 
-<prog> ::= “int main() { <stat_list> return 0; }”
+<b><prog></b> ::= “int main() { <stat_list> return 0; }”
 
 <stat_list> ::= <stat>
 	     | <stat_list> <stat>
