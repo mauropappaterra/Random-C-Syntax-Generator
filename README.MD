@@ -3,6 +3,14 @@
 Randomly generates a syntactically correct C snippet. This short Java program generates C code using a set of production rules. 
 <br>
 
+<h4>Instructions for executing the program:</h4>
+1. To open the program, double click on the executable file 'exec.jar'.
+You need to have the <i>Java Runtime Environment</i> installed on your computer. You can
+download it <a href="https://www.java.com/en/download/">here</a>.<br>
+2. By clicking on 'Save to File' the randomly generated code is saved into a file named 'random_C.txt'. <br>
+3. The source code can be found inside the folder named 'src'.  <br>
+4. If you have any problems executing this program, do not hesitate to contact me. <br>
+
 <h4>Production Rules set used to define a subset of the C programming language. </h4>
 
 <pre>
@@ -113,11 +121,3 @@ while (Rsoa)
 E = 96 * 4;
 return 0; }
 </pre>
-
-<h4>Instructions for executing the program:</h4>
-1. To open the program, double click on the executable file 'exec.jar'.
-You need to have the <i>Java Runtime Environment</i> installed on your computer. You can
-download it <a href="https://www.java.com/en/download/">here</a>.<br>
-2. By clicking on 'Save to File' the randomly generated code is saved into a file named 'random_C.txt'. <br>
-3. The source code can be found inside the folder named 'src'.  <br>
-4. If you have any problems executing this program, do not hesitate to contact me. <br>
